@@ -1,12 +1,12 @@
-﻿using System.Runtime.Remoting.Contexts;
-using IdentityServer3.Core.Configuration;
+﻿using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services;
+using Stores;
+using Context = Core.Context;
 
 namespace Services
 {
     public static class UserServiceExtensions
     {
-
         public static void ConfigureUserService(this IdentityServerServiceFactory factory, string connString)
         {
             factory.UserService = new Registration<IUserService, UserService>();
@@ -14,6 +14,5 @@ namespace Services
             factory.Register(new Registration<UserStore>());
             factory.Register(new Registration<Context>(resolver => new Context(connString)));
         }
-
     }
 }

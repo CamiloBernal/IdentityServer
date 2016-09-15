@@ -1,6 +1,6 @@
 ﻿using Core;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+using Stores;
 
 namespace Services
 {
@@ -12,5 +12,4 @@ namespace Services
             this.ClaimsIdentityFactory = new ClaimsFactory();
         }
     }
-
 }
