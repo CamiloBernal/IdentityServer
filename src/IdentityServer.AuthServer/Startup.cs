@@ -15,19 +15,15 @@ namespace IdentityServer.AuthServer
         public void Configuration(IAppBuilder appBuilder)
         {
             var factory = new IdentityServerServiceFactory();
-
             var populator = new Populator();
-
             factory.UseEntityFramework(ConnectionString, populator);
-            factory.UseAspNetIdentity(ConnectionString);
-
+            factory.UseAspNetIdentity(ConnectionString, populator);
             var options = new IdentityServerOptions
             {
                 SiteName = "IdentityServer3 - (EntityFramework)",
                 //SigningCertificate = Certificate.Get(),
                 Factory = factory
             };
-
             appBuilder.UseIdentityServer(options);
         }
     }

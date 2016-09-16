@@ -1,4 +1,5 @@
-﻿using IdentityServer3.Core.Models;
+﻿using IdentityServer.Core.Dtos;
+using IdentityServer3.Core.Models;
 using System.Collections.Generic;
 
 namespace IdentityServer.Core
@@ -7,5 +8,6 @@ namespace IdentityServer.Core
     {
         IEnumerable<Client> Clients { get; }
         IEnumerable<Scope> Scopes { get; }
+        IEnumerable<IdentityUserDto> Users { get; }
     }
 }

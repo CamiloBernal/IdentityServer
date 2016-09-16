@@ -1,4 +1,5 @@
 ﻿using IdentityServer.Core;
+using IdentityServer.Core.Dtos;
 using IdentityServer3.Core;
 using IdentityServer3.Core.Models;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace IdentityServer.DefaultPopulateDbProvider
 {
     public class Populator : IPopulateDbProvider
     {
-        public IEnumerable<Client> Clients =>  new List<Client>
+        public IEnumerable<Client> Clients => new List<Client>
             {
                 /////////////////////////////////////////////////////////////
                 // Client Credentials With Reference Token
@@ -352,7 +353,6 @@ namespace IdentityServer.DefaultPopulateDbProvider
                     LogoutSessionRequired = true
                 },
 
-                
                 /////////////////////////////////////////////////////////////
                 // MVC OWIN Implicit Client
                 /////////////////////////////////////////////////////////////
@@ -597,5 +597,21 @@ namespace IdentityServer.DefaultPopulateDbProvider
                         }
                     }
                 };
+
+        public IEnumerable<IdentityUserDto> Users => new[]
+        {
+            new IdentityUserDto
+            {
+                UserName = "Admin",
+                Password = "123456",
+                UserClaims = new List<Claim>
+                {
+                    new Claim(Constants.ClaimTypes.GivenName, "Scott"),
+                    new Claim(Constants.ClaimTypes.FamilyName, "Brady"),
+                    new Claim(Constants.ClaimTypes.Email, "info@scottbrady91.com"),
+                    new Claim(Constants.ClaimTypes.Role, "Admin")
+                }
+            }
+        };
     }
 }
