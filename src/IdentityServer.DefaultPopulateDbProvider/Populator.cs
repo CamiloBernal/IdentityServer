@@ -12,6 +12,42 @@ namespace IdentityServer.DefaultPopulateDbProvider
         public IEnumerable<Client> Clients => new List<Client>
             {
                 /////////////////////////////////////////////////////////////
+                // Demo client Hybrid
+                /////////////////////////////////////////////////////////////
+             new Client
+                {
+                    ClientId = @"hybridclient",
+                    ClientName = @"Example Hybrid Client",
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("idsrv3test".Sha256())
+                    },
+                    Enabled = true,
+                    Flow = Flows.Hybrid,
+                    RequireConsent = true,
+                    AllowRememberConsent = true,
+                    RedirectUris = new List<string>
+                    {
+                        "https://localhost:44305/"
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "https://localhost:44305/"
+                    },
+                    AllowedScopes = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.Email,
+                        Constants.StandardScopes.Roles,
+                        Constants.StandardScopes.OfflineAccess
+                    },
+                    AccessTokenType = AccessTokenType.Jwt
+                }
+            ,
+            ////////////////////
+
+                /////////////////////////////////////////////////////////////
                 // Client Credentials With Reference Token
                 /////////////////////////////////////////////////////////////
                 new Client
@@ -549,10 +585,12 @@ namespace IdentityServer.DefaultPopulateDbProvider
                     StandardScopes.OpenId,
                     StandardScopes.Profile,
                     StandardScopes.Email,
+                    StandardScopes.Roles,
                     StandardScopes.Address,
                     StandardScopes.OfflineAccess,
                     StandardScopes.RolesAlwaysInclude,
                     StandardScopes.AllClaims,
+
 
                     ////////////////////////
                     // resource scopes
