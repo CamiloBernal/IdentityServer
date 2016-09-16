@@ -1,6 +1,6 @@
-﻿using IdentityServer.AspNetIdentityServices.Helpers;
+﻿using IdentityServer.AspNetIdentityServices.App_Packages.IdentityServer3.AspNetIdentity;
+using IdentityServer.AspNetIdentityServices.Helpers;
 using IdentityServer.Core;
-using IdentityServer3.AspNetIdentity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Threading.Tasks;

@@ -5,7 +5,7 @@ namespace IdentityServer.AuthServer
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             const string url = "https://localhost:44333/core";
 

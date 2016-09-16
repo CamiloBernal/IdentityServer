@@ -8,6 +8,7 @@ namespace IdentityServer.Core.Dtos
     {
         // ReSharper disable once UnassignedGetOnlyAutoProperty
         public string Id { get; }
+
         public string UserName { get; set; }
 
         public string Password { get; set; }
