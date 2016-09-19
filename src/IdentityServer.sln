@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdenti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.DefaultPopulateDbProvider", "IdentityServer.DefaultPopulateDbProvider\IdentityServer.DefaultPopulateDbProvider.csproj", "{3FBF438C-42EA-4569-B1B3-766D7008CA9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Clients.ConsoleResourceOwner", "IdentityServer.Clients.ConsoleResourceOwner\IdentityServer.Clients.ConsoleResourceOwner.csproj", "{D4774DED-AF67-4737-998B-12A5041B0D35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Constants", "IdentityServer.Constants\IdentityServer.Constants.csproj", "{ACDA5E6C-BC67-49BC-8339-1CC54CB3E1AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{3FBF438C-42EA-4569-B1B3-766D7008CA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FBF438C-42EA-4569-B1B3-766D7008CA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FBF438C-42EA-4569-B1B3-766D7008CA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4774DED-AF67-4737-998B-12A5041B0D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4774DED-AF67-4737-998B-12A5041B0D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4774DED-AF67-4737-998B-12A5041B0D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4774DED-AF67-4737-998B-12A5041B0D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDA5E6C-BC67-49BC-8339-1CC54CB3E1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDA5E6C-BC67-49BC-8339-1CC54CB3E1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDA5E6C-BC67-49BC-8339-1CC54CB3E1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDA5E6C-BC67-49BC-8339-1CC54CB3E1AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +65,6 @@ Global
 		{C4427187-A64A-4AD5-9C0E-A8504744D747} = {6EDC9F8C-E3C9-4C20-BA83-3435508BC5EA}
 		{BDF9674C-A115-4A80-942F-9523B872187A} = {6EDC9F8C-E3C9-4C20-BA83-3435508BC5EA}
 		{3FBF438C-42EA-4569-B1B3-766D7008CA9A} = {6EDC9F8C-E3C9-4C20-BA83-3435508BC5EA}
+		{D4774DED-AF67-4737-998B-12A5041B0D35} = {C376FAC8-D214-44D6-BA58-FE7EE763EE4E}
 	EndGlobalSection
 EndGlobal
