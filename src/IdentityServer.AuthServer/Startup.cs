@@ -4,6 +4,7 @@ using IdentityServer.EFServices;
 using IdentityServer3.Core.Configuration;
 using Owin;
 using System.Configuration;
+using IdentityServer.AuthServer.Config;
 
 namespace IdentityServer.AuthServer
 {
@@ -21,9 +22,25 @@ namespace IdentityServer.AuthServer
             var options = new IdentityServerOptions
             {
                 SiteName = "IdentityServer3 - (EntityFramework)",
-                //SigningCertificate = Certificate.Get(),
-                Factory = factory
+                SigningCertificate = Certificate.Get(),
+                Factory = factory,
+
+                EventsOptions = new EventsOptions
+                {
+                    RaiseSuccessEvents = true,
+                    RaiseErrorEvents = true,
+                    RaiseFailureEvents = true,
+                    RaiseInformationEvents = true
+                },
+                LoggingOptions = new LoggingOptions
+                {
+                    EnableHttpLogging = true,
+                    EnableKatanaLogging = true,
+                    EnableWebApiDiagnostics = true,
+                    WebApiDiagnosticsIsVerbose = true
+                }
             };
+
             appBuilder.UseIdentityServer(options);
         }
     }
